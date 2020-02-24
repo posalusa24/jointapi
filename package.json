@@ -1,0 +1,20 @@
+{
+  "name": "jointapi",
+  "version": "1.0.0",
+  "description": "API for thukyaw11's Joint",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PosaLusa24/jointapi.git"
+  },
+  "author": "PosaLusa24",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PosaLusa24/jointapi/issues"
+  },
+  "homepage": "https://github.com/PosaLusa24/jointapi#readme",
+  "dependencies": {
+    "mongoose": "^5.9.2"
+  }
+}
