@@ -20,6 +20,7 @@ module.exports = await (req, res) => {
     post.description = req.query.description || post.description;
     post.favouriate = req.query.favouriate || post.favouriate;
     post.tag = req.query.tag || post.tag;
+    post.minRead = req.query.minRead || post.minRead;
     await post.save();
   });
 };
