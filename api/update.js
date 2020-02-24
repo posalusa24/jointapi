@@ -13,7 +13,8 @@ module.exports = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).send('Updated');
   });*/
-  Post.findOne({ id: req.query.id }, async (err, post) => {
+  Post.findOne({ id: req.query.searchid }, async (err, post) => {
+    if (err) return console.error(err);
     post.title = req.query.title || post.title;
     post.author = req.query.author || post.author;
     post.thumbnail = req.query.thumbnail || post.thumbnail;
@@ -22,7 +23,6 @@ module.exports = (req, res) => {
     post.tag = req.query.tag || post.tag;
     post.minRead = req.query.minRead || post.minRead;
     await post.save();
-    if (err) return console.error(err);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).send('Updated');
   });
