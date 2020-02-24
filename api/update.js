@@ -1,6 +1,6 @@
 const Post = require('../mongoose-init').postModel;
 
-module.exports = await (req, res) => {
+module.exports = (req, res) => {
   /*Post.updateOne({ id: req.query.id }, {
     id: req.query.id,
     title: req.query.title,
