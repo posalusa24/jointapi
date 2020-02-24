@@ -13,7 +13,7 @@ module.exports = (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).send('Updated');
   });*/
-  Post.findOne({ id: req.query.id }, await (err, post) => {
+  Post.findOne({ id: req.query.id }, (err, post) => {
     post.title = req.query.title || post.title;
     post.author = req.query.author || post.author;
     post.thumbnail = req.query.thumbnail || post.thumbnail;
