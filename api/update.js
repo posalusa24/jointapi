@@ -1,6 +1,6 @@
 const Post = require('../mongoose-init').postModel;
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
   /*Post.updateOne({ id: req.query.id }, {
     id: req.query.id,
     title: req.query.title,
@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).send('Updated');
   });*/
-  await Post.findOne({ id: req.query.id }, async (err, post) => {
+  Post.findOne({ id: req.query.id }, async (err, post) => {
     post.title = req.query.title || post.title;
     post.author = req.query.author || post.author;
     post.thumbnail = req.query.thumbnail || post.thumbnail;
@@ -22,5 +22,8 @@ module.exports = async (req, res) => {
     post.tag = req.query.tag || post.tag;
     post.minRead = req.query.minRead || post.minRead;
     await post.save();
+    if (err) return console.error(err);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.status(200).send('Updated');
   });
 };
