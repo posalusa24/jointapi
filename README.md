@@ -1,2 +1,2 @@
 # jointapi
-API for thukyaw11's Joint
+API for thukyaw11's Joint, deployed with ZEIT Now
