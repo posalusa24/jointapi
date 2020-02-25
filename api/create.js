@@ -8,6 +8,7 @@ module.exports = (req, res) => {
     thumbnail: req.query.thumbnail,
     description: req.query.description,
     tag: req.query.tag,
+    minRead: req.query.minRead
   });
   post.save((err) => {
     if (err) return console.error(err);
