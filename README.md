@@ -11,6 +11,8 @@ Endpoints:
 
 ## GET /api/create
 Creates a new post.
+### Return Value
+`"Created"`
 ### Parameters
 | Name          | Type     | Required | Default | Description                            |
 | :-            | :-:      | :-:      | :-:     | :-                                     |
@@ -24,12 +26,15 @@ Creates a new post.
 
 ## GET /api/read
 Lists all posts.
+### Return Value
+`[postObject1, postObject2,...]`
 ### Parameters
-| Name | Type | Required | Default | Description |
-| :-   | :-:  | :-:      | :-:     | :-          |
+None
 
 ## GET /api/update
 Updates the contents of a post specified by `searchid`.
+### Return Value
+`"Updated"`
 ### Parameters
 | Name          | Type      | Required | Default       | Description                            |
 | :-            | :-:       | :-:      | :-:           | :-                                     |
@@ -44,6 +49,8 @@ Updates the contents of a post specified by `searchid`.
 
 ## GET /api/delete
 Deletes a post specified by `searchid`.
+### Return Value
+`"Deleted"`
 ### Parameters
 | Name       | Type     | Required | Default | Description                  |
 | :-         | :-:      | :-:      | :-:     | :-                           |
