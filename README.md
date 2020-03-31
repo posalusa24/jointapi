@@ -4,13 +4,13 @@ REST API for [thukyaw11's Joint](https://github.com/thukyaw11/joint)
 Deployed at https://jointapi.now.sh
 
 Endpoints:
-- [GET /api/create](#api_create)
-- [GET /api/read](#api_read)
-- [GET /api/update](#api_update)
-- [GET /api/delete](#api_delete)
+- [GET /api/create](#get-apicreate)
+- [GET /api/read](#get-apiread)
+- [GET /api/update](#get-apiupdate)
+- [GET /api/delete](#get-apidelete)
 
-## <a name="api_create"></a>GET /api/create
-Creates a new post
+## GET /api/create
+Creates a new post.
 ### Parameters
 | Name          | Type     | Required | Default | Description                            |
 | :-            | :-:      | :-:      | :-:     | :-                                     |
@@ -22,14 +22,14 @@ Creates a new post
 | `tag`         | `String` | yes      |         | Post tag                               |
 | `minRead`     | `Number` | no       | `null`  | Estimated time in minutes to read post |
 
-## <a name="api_read"></a>GET /api/read
-Lists all posts
+## GET /api/read
+Lists all posts.
 ### Parameters
 | Name | Type | Required | Default | Description |
 | :-   | :-:  | :-:      | :-:     | :-          |
 
-## <a name="api_update"></a>GET /api/update
-Updates the contents of a post specified by `searchid`
+## GET /api/update
+Updates the contents of a post specified by `searchid`.
 ### Parameters
 | Name          | Type      | Required | Default       | Description                            |
 | :-            | :-:       | :-:      | :-:           | :-                                     |
@@ -42,8 +42,8 @@ Updates the contents of a post specified by `searchid`
 | `tag`         | `String`  | no       | \(unchanged\) | Post tag                               |
 | `minRead`     | `Number`  | no       | \(unchanged\) | Estimated time in minutes to read post |
 
-## <a name="api_delete"></a>GET /api/delete
-Deletes a post specified by `searchid`
+## GET /api/delete
+Deletes a post specified by `searchid`.
 ### Parameters
 | Name       | Type     | Required | Default | Description                  |
 | :-         | :-:      | :-:      | :-:     | :-                           |
