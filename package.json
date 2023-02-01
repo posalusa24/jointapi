@@ -15,6 +15,6 @@
   },
   "homepage": "https://github.com/PosaLusa24/jointapi#readme",
   "dependencies": {
-    "mongoose": "^5.9.2"
+    "mongoose": "^5.13.15"
   }
 }
